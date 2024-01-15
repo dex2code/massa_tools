@@ -1,0 +1,2 @@
+#m      h       dom     mon     dow     command
+*/15    *       *       *       *       /home/massa/bin/massa_monitor.sh

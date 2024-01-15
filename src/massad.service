@@ -1,0 +1,26 @@
+[Unit]
+Description=Massa Node
+
+Wants=network-online.target
+After=network-online.target
+
+
+[Service]
+Type=idle
+
+User=massa
+
+PIDFile=/tmp/massa.pid
+
+LimitNOFILE=262144
+LimitNPROC=262144
+
+ExecStart=/home/massa/bin/massa_start.sh
+ExecStop=/home/massa/bin/massa_stop.sh
+
+Restart=always
+RestartSec=60
+
+
+[Install]
+WantedBy=multi-user.target

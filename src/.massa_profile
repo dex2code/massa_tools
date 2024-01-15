@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+
+MASSA_NODE_NAME="MASSA_01"
+
+MASSA_ROOT_PATH="/home/massa/massa"
+
+MASSA_NODE_PATH="$MASSA_ROOT_PATH/massa-node"
+MASSA_CLIENT_PATH="$MASSA_ROOT_PATH/massa-client"
+
+MASSA_PASS=""
+MASSA_WALLET=""
+
+MASSA_FEE="1"
+
+
+TG_TOKEN=""
+TG_URL="https://api.telegram.org/bot$TG_TOKEN/sendMessage"
+TG_CHAT=""
