@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 MY_IP_ADDRESS=$(hostname -I)
-MY_NODE_VER=$(~/bin/massa_status | grep "Version" | awk '{print $2}')
-MY_NODE_ID=$(~/bin/massa_status | grep "ID" | grep -v "IP" | awk '{print $3}')
+MY_NODE_VER=$(~/bin/massa_status.sh | grep "Version" | awk '{print $2}')
+MY_NODE_ID=$(~/bin/massa_status.sh | grep "ID" | grep -v "IP" | awk '{print $3}')
 
 echo
 echo "Primary IP      : [ $MY_IP_ADDRESS ]"
