@@ -54,6 +54,8 @@ def main() -> int:
 
     try:
         staker_candidate_rolls = api_resp['result'][-1]['candidate_roll_count']
+        if staker_candidate_rolls is None:
+            staker_candidate_rolls = 0
         staker_candidate_rolls = int(staker_candidate_rolls)
     except Exception:
         print(0)

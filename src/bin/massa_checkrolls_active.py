@@ -43,7 +43,7 @@ def main() -> int:
         print(0)
         return 1
 
-    if massa_wallet == "" or massa_wallet == "None":
+    if massa_wallet == "" or massa_wallet == "None" or massa_wallet is None:
         print(0)
         return 1
 
@@ -53,6 +53,8 @@ def main() -> int:
 
     try:
         staker_active_rolls = api_resp['result'][-1]['cycle_infos'][-1]['active_rolls']
+        if staker_active_rolls is None:
+            staker_active_rolls = 0
         staker_active_rolls = int(staker_active_rolls)
     except Exception:
         print(0)
